@@ -97,6 +97,7 @@ h3 {
 
 .input-header {
     font-weight: 700;
+    border-bottom: 1px solid black;
 }
 
 .save-btn {
