@@ -1,6 +1,6 @@
 const LOCAL_STORAGE_NODE_LIST = "notes";
 let notes = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_NODE_LIST));
-notes = notes===null ? [] : notes; 
+notes = notes === null ? [] : notes;
 
 const SECTION_OF_NOTES = document.getElementById("notes");
 const createWindow = document.getElementById("create-window");
@@ -15,12 +15,12 @@ createButton.addEventListener("click", () => {
     createButton.classList.add("hidden")
 });
 saveButton.addEventListener("click", () => {
-    if(!header.value == "" && !text.value == "") {
-    createWindow.classList.add("hidden");
-    createButton.classList.remove("hidden");
-    saveNote();
-    text.value = "";
-    header.value = "";
+    if (!header.value == "" && !text.value == "") {
+        createWindow.classList.add("hidden");
+        createButton.classList.remove("hidden");
+        saveNote();
+        text.value = "";
+        header.value = "";
     }
 });
 close_btn.addEventListener("click", () => {
@@ -66,9 +66,9 @@ function createNote(note) {
 
 function delete_note(note_UUID) {
     let index = -1;
-    for(let i in notes) {
-        if(notes[i].UUID == note_UUID) {
-            if(notes.lenght==0) {
+    for (let i in notes) {
+        if (notes[i].UUID === note_UUID) {
+            if (notes.lenght == 0) {
                 index = i;
                 break;
             }
@@ -81,14 +81,15 @@ function delete_note(note_UUID) {
 }
 
 function redact_note(note_UUID) {
- for(let i in notes) {
-    if(notes[i].UUID = note_UUID) {
-        index=i;
-        break;
+    let index = -1;
+    for (let i in notes) {
+        if (notes[i].UUID === note_UUID) {
+            index = i;
+            break;
         }
     }
     let noteDiv = document.querySelector(`div[noteid='${note_UUID}']`);
-    let header_= noteDiv.querySelector(".note-header");
+    let header_ = noteDiv.querySelector(".note-header");
     let text_ = noteDiv.querySelector(".note-text");
     let save_redact_ = noteDiv.querySelector(".save-redo-note");
     let redact_note_ = noteDiv.querySelector(".redo-note");
@@ -113,14 +114,14 @@ function redact_note(note_UUID) {
     header_.setAttribute("contenteditable", "");
     text_.setAttribute("contenteditable", "");
     header_.focus();
-    
+
     return;
 }
 
 function fillpage() {
-    if(notes == "null")
-    notes = []
-    for(let note of notes) {
+    if (notes == "null")
+        notes = []
+    for (let note of notes) {
         SECTION_OF_NOTES.appendChild(createNote(note));
     }
 }
