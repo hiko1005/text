@@ -144,6 +144,7 @@ h3 {
 .note-text {
     margin-right: 2rem;
     word-wrap: break-word;
+    min-height: 1rem;
 }
 
 .wrapper {
