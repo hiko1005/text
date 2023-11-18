@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main class="wrapper">
+        <div class="app-header">
+            <h1 class="head">Notes</h1>
+        </div>
+        <section id="notes" class="notes">
+
+        </section>
+    </main>
+
+
+    <section id="create-window" class="create-window hidden">
+        <input type="text" id="new-note-header" class="input-header inputs">
+        <textarea id="new-note-text" class="text-input inputs"></textarea>
+        <div class="btn-save-close">
+            <div class="save-btn" id="save-btn">Save</div>
+            <div class="close-btn" id="close-btn">Close</div>
+        </div>
+    </section>
+    <input type="text">
+
+    <section class="create-note">
+        <img src="./images/create.png" alt="Create-button" width="50px" id="create-btn">
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

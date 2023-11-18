@@ -1,0 +1,13 @@
+{
+    "name": "Note",
+    "shortname": "Note",
+    "start_url": ".",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./images/notepad-57.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
